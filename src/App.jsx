@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import MediaCard from './components/employeeCard.jsx'
+import MediaCard from './components/employeeCard'
 import Container from '@mui/material/Container';
 import data from './data/data'
 import './App.css'
@@ -13,8 +13,8 @@ function App() {
 
   return (
     <Container fixed>
-    <MediaCard />
-    <MediaCard />
+    <MediaCard employee={data} />
+    <MediaCard employee={data} />
     <MediaCard />
     </Container>
     

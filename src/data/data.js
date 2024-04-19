@@ -1,5 +1,6 @@
 const data = [{
     "employeeId": "12345",
+    "image": "profile1.png",
     "firstName": "Alice",
     "lastName": "Johnson",
     "email": "alice.johnson@example.com",
@@ -11,6 +12,7 @@ const data = [{
 
   {
     "employeeId": "67890",
+    "image": "profile2.png",
     "firstName": "Bob",
     "lastName": "Williams",
     "email": "bob.williams@example.com",
@@ -22,6 +24,7 @@ const data = [{
 
   {
     "employeeId": "13579",
+    "image": "profile3.png",
     "firstName": "Eva",
     "lastName": "Brown",
     "email": "eva.brown@example.com",
@@ -33,6 +36,7 @@ const data = [{
 
   {
     "employeeId": "24680",
+    "image": "profile4.png",
     "firstName": "David",
     "lastName": "Lee",
     "email": "david.lee@example.com",
@@ -44,6 +48,7 @@ const data = [{
 
   {
     "employeeId": "97531",
+    "image": "profile5.png",
     "firstName": "Sophia",
     "lastName": "Garcia",
     "email": "sophia.garcia@example.com",

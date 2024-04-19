@@ -7,25 +7,33 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { SvgIcon } from '@mui/material';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 
-export default function MediaCard() {
+
+export default function MediaCard({ employee }) {
+  console.log(employee);
   return (
-    <Card sx={{ maxWidth: 345, margin:10}}>
+    <Card sx={{ maxWidth: 345, margin:10, }}>
       <CardMedia
-        sx={{ height: 140 }}
-        image="xyz.jpeg"
+        sx={{ height: 200, backgroundSize: 'contain', margin: 2 }}
+        image="profile1.png" 
         title="green iguana"
       />
       <CardContent>
         <DarkModeIcon />
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {employee[0].firstName} {employee[0].lastName}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          kayden is a hooman being. He is wearing a purple outfit today.
         </Typography>
       </CardContent>
+  
+      <Stack direction="row" spacing={1}>
+      <Chip label="Clickable" onClick={handleClick} />
+      <Chip label="Clickable" variant="outlined" onClick={handleClick} />
+    </Stack>
       <CardActions>
         <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>
