@@ -12,7 +12,7 @@ import Stack from '@mui/material/Stack';
 
 
 export default function MediaCard({ employee }) {
-  console.log("from employe", employee);
+  console.log(employee);
   return (
     <Card sx={{ maxWidth: 345, margin:10, }}>
       <CardMedia
@@ -40,5 +40,6 @@ export default function MediaCard({ employee }) {
       </CardActions>
     </Card>
   );
+
 }
 
