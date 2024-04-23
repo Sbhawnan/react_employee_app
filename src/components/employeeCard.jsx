@@ -10,36 +10,40 @@ import { SvgIcon } from '@mui/material';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 
-
 export default function MediaCard({ employee }) {
   console.log(employee);
   return (
-    <Card sx={{ maxWidth: 345, margin:10, }}>
-      <CardMedia
-        sx={{ height: 200, backgroundSize: 'contain', margin: 2 }}
-        image="profile1.png" 
-        title="green iguana"
-      />
-      <CardContent>
-        <DarkModeIcon />
-        <Typography gutterBottom variant="h5" component="div">
-          {employee[0].firstName} {employee[0].lastName}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          kayden is a hooman being. He is wearing a purple outfit today.
-        </Typography>
-      </CardContent>
-  
-      <Stack direction="row" spacing={1}>
-      <Chip label="Clickable" />
-      <Chip label="Clickable" variant="outlined" />
-    </Stack>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+ <>
+      {employee.map((item, index) => (
+        <Card key={index} sx={{ maxWidth: 345, margin: 10, padding: 1 }}>
+          <CardMedia
+            sx={{ height: 200, backgroundSize: "contain", margin: 1 }}
+            image={`/react_employee_app/${item.image}`} 
+            title="profile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {item.firstName} {item.lastName}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {employee[0].department}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {employee[0].position}
+            </Typography>
+          </CardContent>
+
+          <Stack direction="row" spacing={1}>
+            <Chip label="Chip Filled" />
+            <Chip label="Chip Outlined" variant="outlined" />
+          </Stack>
+
+          <CardActions>
+            <Button size="small">Share</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
+        </Card>
+      ))}
+    </>
   );
-
 }
-
