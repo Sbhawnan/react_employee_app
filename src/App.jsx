@@ -9,13 +9,10 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   console.log(data[0].firstName);
-  console.log(data);
 
   return (
     <Container fixed>
     <MediaCard employee={data} />
-    <MediaCard employee={data} />
-    <MediaCard />
     </Container>
     
   )
