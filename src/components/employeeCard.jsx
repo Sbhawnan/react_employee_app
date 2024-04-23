@@ -12,7 +12,7 @@ import Stack from '@mui/material/Stack';
 
 
 export default function MediaCard({ employee }) {
-  console.log(employee);
+  console.log("from employe", employee);
   return (
     <Card sx={{ maxWidth: 345, margin:10, }}>
       <CardMedia
@@ -31,8 +31,8 @@ export default function MediaCard({ employee }) {
       </CardContent>
   
       <Stack direction="row" spacing={1}>
-      <Chip label="Clickable" onClick={handleClick} />
-      <Chip label="Clickable" variant="outlined" onClick={handleClick} />
+      <Chip label="Clickable" />
+      <Chip label="Clickable" variant="outlined" />
     </Stack>
       <CardActions>
         <Button size="small">Share</Button>
