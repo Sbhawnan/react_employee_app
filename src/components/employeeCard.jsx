@@ -15,6 +15,8 @@ export default function MediaCard({ employee }) {
   return (
  <>
       {employee.map((item, index) => (
+      
+
         <Card key={index} sx={{ maxWidth: 345, margin: 10, padding: 1 }}>
           <CardMedia
             sx={{ height: 200, backgroundSize: "contain", margin: 1 }}
@@ -33,10 +35,16 @@ export default function MediaCard({ employee }) {
             </Typography>
           </CardContent>
 
-          <Stack direction="row" spacing={1}>
-            <Chip label="Chip Filled" />
-            <Chip label="Chip Outlined" variant="outlined" />
-          </Stack>
+          <Stack>
+          {item.skills.map((skill,skillindex) => (
+            <Chip
+            variant="outlined"
+            sx={{ marginTop: "10px" }}
+            key={skillindex}
+            label={skill} />
+          ))}
+          
+        </Stack>
 
           <CardActions>
             <Button size="small">Share</Button>
